@@ -28,7 +28,7 @@ const intalizeDbServer = async () => {
 
 intalizeDbServer();
 
-app.get("/user", async (req, res) => {
+app.get("/", async (req, res) => {
   const query = `select * from users;`;
   const result = await db.all(query);
   res.send(result);
